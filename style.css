@@ -1,0 +1,27 @@
+:root {
+  --green: rgb(188, 216, 161);
+  --blue: rgb(64, 120, 137);
+  --tan: rgb(198, 188, 174);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', Arial, sans-serif;
+  color: var(--blue);
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('./fonts/Poppins.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'poppins';
+  src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
