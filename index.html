@@ -5,25 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>Hannah Liao</h1>
-      <picture>
-        <source srcset="./img/mountains-480.jpg" media="(max-width: 767px)" />
-        <source srcset="./img/mountains-1200.jpg" media="(min-width: 768px)" />
-        <img src="./img/mountains-1200.jpg" alt="" />
-      </picture>
-      <!-- <img
-        src="mountains-480.jpg"
-        srcset="mountains-480.jpg 480w, mountains-1200.jpg 1200w"
-        sizes="(max-width: 600px) 480px, 1200px"
-        alt=""
-      /> -->
-    </header>
-    <main>
-      <h1>About Me</h1>
-      <p>Hi, I'm Hannah.</p>
-    </main>
+    <section class="page-content">
+      <header>
+        <div class="img">
+          <picture>
+            <source
+              srcset="./img/mountains-480.jpg"
+              media="(max-width: 767px)"
+            />
+            <source
+              srcset="./img/mountains-1200.jpg"
+              media="(min-width: 768px)"
+            />
+            <img src="./img/mountains-480.jpg" alt="" />
+          </picture>
+          <div id="name">Hannah Liao</div>
+        </div>
+        <section class="about">
+          <h1>About Me</h1>
+          <p>
+            Hi, I'm Hannah. I graduated from the University of Maryland when
+            COVID hit and started working as a quality engineer at Alarm.com
+            (they do smart security systems). After three years, I quit my job
+            so that my husband and I could move to Denver, Colorado (for the
+            mountains! I snowboard, he skis). I start studying Python to switch
+            into software, and then I find this amazing curriculum called The
+            Odin Project. I've genuinely enjoyed this course and all the
+            projects I've completed as assignments. Take a look below!
+          </p>
+        </section>
+      </header>
+
+      <main>
+        <section class="work">
+          <h1>My Work</h1>
+          <div class="projects"></div>
+        </section>
+      </main>
+
+      <footer>
+        <section class="contact">
+          <h1>Contact Me</h1>
+          <p>Please get in touch if you'd like to chat!</p>
+          <p>123 Not Real Address<br />Random Road, CO 12345</p>
+          <div class="phone">~insert phone icon~ 123-456-7890</div>
+          <div class="email">~insert mail icon~ notreal@gmail.com</div>
+          <div class="icons">~insert github and linkedin icons here~</div>
+        </section>
+        <picture>
+          <source srcset="./img/profile-400.jpg" media="(max-width: 1199px)" />
+          <source srcset="./img/profile-725.jpg" media="(min-width: 1200px)" />
+          <img src="./img/profile-400.jpg" alt="" />
+        </picture>
+      </footer>
+    </section>
   </body>
 </html>

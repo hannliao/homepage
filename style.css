@@ -1,6 +1,6 @@
 :root {
-  --green: rgb(188, 216, 161);
-  --blue: rgb(64, 120, 137);
+  --green: rgb(197, 228, 169);
+  --blue: rgb(64, 109, 137);
   --tan: rgb(198, 188, 174);
 }
 
@@ -24,4 +24,107 @@
   src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+}
+
+.page-content {
+  display: grid;
+  gap: 50px;
+  justify-items: center;
+}
+
+.page-content * {
+  max-width: 1200px;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+#name {
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  bottom: 100px;
+  left: 50px;
+  max-width: 400px;
+  color: var(--green);
+}
+
+section {
+  padding: 50px;
+  font-size: 16px;
+}
+
+.projects {
+  display: grid;
+  gap: 50px;
+}
+
+.card {
+  max-width: 480px;
+  /* box-shadow: 2px 2px var(--tan); */
+}
+
+.card-img img {
+  max-width: 300px;
+}
+
+footer {
+  background-color: var(--blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact * {
+  color: var(--green);
+  margin: 30px 0;
+}
+
+@media (min-width: 1201px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-content * {
+    max-width: 768px;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    text-align: center;
+  }
+
+  footer {
+    display: grid;
+    justify-items: center;
+  }
+
+  .projects {
+    grid-template-columns: 480px;
+  }
+
+  .card-img img {
+    max-width: 480px;
+  }
 }
