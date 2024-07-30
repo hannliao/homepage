@@ -1,12 +1,3 @@
-// const Battleship = './img/battleship.png';
-// const WeatherApp = './img/weather-app.png';
-// const SignUpForm = './img/signup-form.png';
-// const Library = './img/library.png';
-// const RestaurantPage = './img/restaurant-page.png';
-// const TicTacToe = './img/tictactoe.png';
-// const ToDoList = './img/todo-list.png';
-// const AdminDash = './img/admin-dash.png';
-
 const projects = [
   {
     name: 'Battleship',
@@ -55,10 +46,8 @@ const projects = [
   },
 ];
 
-const linkedinIconPath =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg';
-const githubIconPath =
-  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg';
+const linkedinIconPath = '/.icons/linkedin.svg';
+const githubIconPath = './icons/github.svg';
 const demoIconPath = './icons/open-in-new.svg';
 
 function addProject(imgSrc, name, description) {
@@ -83,7 +72,7 @@ function addProject(imgSrc, name, description) {
   projectDesc.textContent = description;
 
   infoContainer.append(infoHeader, projectDesc);
-  card.append(imgContainer, description);
+  card.append(imgContainer, infoContainer);
   projectsContainer.appendChild(card);
 }
 
@@ -96,6 +85,7 @@ function createDiv(className) {
 function createIcon(iconPath) {
   const icon = document.createElement('img');
   icon.src = iconPath;
+  icon.classList.add('icon');
   return icon;
 }
 
