@@ -28,14 +28,16 @@
 }
 
 body {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .page-content {
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
 }
 
 header,
@@ -49,17 +51,18 @@ h1 {
   font-size: 30px;
 }
 
-.page-content * {
-  max-width: 1200px;
-}
-
 header {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-img {
-  object-fit: cover;
+picture {
+  display: flex;
+}
+
+header img {
+  max-width: 100%;
+  flex: 1;
 }
 
 #name {
@@ -67,29 +70,31 @@ img {
   font-weight: bold;
   position: relative;
   bottom: 100px;
-  left: 20px;
+  left: 60px;
   max-width: 400px;
   color: var(--green);
 }
 
-.about {
-  margin-bottom: 50px;
+.about,
+.work h1 {
+  margin: 50px;
+  margin-top: 0;
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .card {
   box-shadow: 2px 2px 5px var(--shadow);
-  margin-bottom: 50px;
+  margin: 20px;
 }
 
 .card,
 .card-img img {
-  max-width: 350px;
+  max-width: 360px;
 }
 
 .card-info {
@@ -100,6 +105,7 @@ img {
 .card-header {
   display: grid;
   grid-template-columns: 1fr 25px 25px;
+  gap: 10px;
   align-items: center;
 }
 
@@ -109,20 +115,21 @@ img {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 footer {
   background-color: var(--blue);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .contact {
   display: grid;
   gap: 30px;
+  align-content: center;
 }
 
 .contact > * {
@@ -136,27 +143,25 @@ footer {
 }
 
 .icons * {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 768px) {
-  .page-content {
-    margin: 20px;
+  .card,
+  .card-img img {
+    max-width: 480px;
   }
 
-  .page-content section {
-    max-width: 768px;
+  .contact {
+    padding: 20px;
+    min-width: 250px;
   }
 }
 
 @media (max-width: 480px) {
-  .page-content {
-    margin: 0;
-  }
-
-  .page-content * {
-    max-width: 480px;
+  header img {
+    min-width: 480px;
   }
 
   h1 {
@@ -164,17 +169,8 @@ footer {
   }
 
   footer {
-    display: grid;
+    grid-template-columns: 1fr;
     justify-items: center;
-  }
-
-  .projects {
-    grid-template-columns: 480px;
-  }
-
-  .card,
-  .card-img img {
-    max-width: 480px;
   }
 
   .icons {
